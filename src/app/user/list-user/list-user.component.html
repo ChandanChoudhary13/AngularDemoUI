@@ -1,0 +1,28 @@
+<div class="col-md-6 user-container">
+  <h2 style="margin: auto"> Contact Details</h2>
+  <button class="btn btn-danger" style="width:100px" (click)="addUser()"> Add User</button>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th class="hidden">Id</th>
+      <th>FirstName</th>
+      <th>LastName</th>
+      <th>Email</th>
+      <th>Phone No.</th>
+      <th>Status</th>
+     </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of contacts">
+      <td class="hidden">{{user.ContactId}}</td>
+      <td>{{user.FirstName}}</td>
+      <td>{{user.LastName}}</td>
+      <td>{{user.Email}}</td>
+      <td>{{user.PhoneNumber}}</td>
+      <td>{{user.Status}}</td>
+      <td><button class="btn btn-success" (click)="deleteUser(user)"> Delete</button>
+        <button class="btn btn-success editAlign" (click)="editUser(user)"> Edit</button></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
